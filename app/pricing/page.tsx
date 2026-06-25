@@ -8,12 +8,14 @@ const plans = [
   {
     name: "Starter",
     price: "29",
+    checkoutUrl: "https://buy.stripe.com/test_14A00c9Mx4hkdOg1SV04804",
     description: "Pour lancer un support plus rapide.",
     features: ["500 conversations / mois", "1 boutique", "FAQ intelligente", "Widget personnalisable", "Statistiques essentielles"],
   },
   {
     name: "Pro",
     price: "79",
+    checkoutUrl: "https://buy.stripe.com/test_fZueV6e2NdRUbG855704803",
     description: "Pour les boutiques en pleine croissance.",
     popular: true,
     features: ["3 000 conversations / mois", "3 boutiques", "Toutes les automatisations", "Recommandations produits", "Statistiques avancées", "Support prioritaire"],
@@ -21,6 +23,7 @@ const plans = [
   {
     name: "Business",
     price: "149",
+    checkoutUrl: "https://buy.stripe.com/test_dRmbIU2k5dRU4dG8hj04802",
     description: "Pour les équipes à fort volume.",
     features: ["Conversations illimitées", "10 boutiques", "Rôles d’équipe", "Intégrations avancées", "Rapports exportables", "Accompagnement dédié"],
   },
@@ -65,11 +68,11 @@ export default function PricingPage() {
                   <span className="pb-1 text-sm text-zinc-500">/ mois</span>
                 </div>
                 <ButtonLink
-                  href="/dashboard"
+                  href={plan.checkoutUrl}
                   variant={plan.popular ? "primary" : "secondary"}
                   className="mt-7 w-full"
                 >
-                  Démarrer gratuitement
+                  Essayer gratuitement 14 jours
                 </ButtonLink>
                 <div className="my-7 h-px bg-zinc-100" />
                 <ul className="space-y-3">
@@ -86,7 +89,7 @@ export default function PricingPage() {
             ))}
           </div>
           <p className="mt-10 text-center text-sm text-zinc-500">
-            Prix hors taxes · 14 jours d’essai gratuit · Aucune carte bancaire requise
+            Prix hors taxes · 14 jours d’essai gratuit · Paiement sécurisé par Stripe · Mode test
           </p>
         </div>
       </section>
