@@ -8,6 +8,7 @@ MVP front-end d’un SaaS français pour automatiser le support client des bouti
 - Page de tarifs avec trois offres
 - Dashboard de démonstration
 - Chatbot front-end fonctionnel avec réponses par mots-clés
+- Abonnements Stripe en environnement de test avec 14 jours d’essai
 - Base de connaissances, conversations et statistiques simulées
 - Code d’intégration copiable
 - Structure prête pour Supabase, Stripe, une API IA, Shopify et WooCommerce
@@ -72,6 +73,7 @@ Chaque nouveau `git push` sur la branche `main` déclenchera ensuite automatique
 - `/pricing` — Tarifs
 - `/dashboard` — Dashboard de démonstration
 - `/demo` — Chatbot interactif
+- `/success` — Confirmation après souscription Stripe
 
 ## Préparer la V2
 
